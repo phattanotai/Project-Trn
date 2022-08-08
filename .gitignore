@@ -15,3 +15,5 @@
 /www/.vscode
 # ignore every log files
 *.log
+
+trn_data/

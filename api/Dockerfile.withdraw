@@ -1,0 +1,17 @@
+# withdraw
+FROM node
+ENV NODE_ENV=production
+ARG SERVICE=withdraw
+WORKDIR /app
+COPY ./${SERVICE} /app/server
+COPY ./config /app/config
+COPY ./constants /app/constants
+RUN cd server && npm install --production
+
+EXPOSE 34000
+CMD [ "node", "server/server.js" ]
+
+
+
+
+
